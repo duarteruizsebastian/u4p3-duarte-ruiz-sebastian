@@ -11,7 +11,7 @@
   {# method="GET": la búsqueda queda en la URL (?q=...) y se puede compartir o recargar #}
   <form method="GET" class="mb-4 flex flex-wrap gap-2 items-center">
     {# name="q": debe coincidir con request.GET.get('q') de la vista · value: conserva lo que se buscó · aria-label: nombre para lectores de pantalla #}
-    <input type="text" name="q" value="{{ query }}" placeholder="Buscar por título..." aria-label="Buscar servicios por título" class="max-w-xs">
+    <input type="text" name="q" value="{{ query }}" placeholder="Buscar por título o categoría..." aria-label="Buscar servicios por título o categoría" class="max-w-xs">
     {# botón que envía la búsqueda #}
     <button type="submit" class="bg-slate-700 text-white px-3 py-2 rounded-lg">Buscar</button>
     {# if query: el enlace "Quitar búsqueda" solo aparece si hay algo buscado #}
@@ -33,6 +33,8 @@
         <tr>
           {# th: encabezado de la columna del nombre #}
           <th class="text-left px-4 py-2">Servicio</th>
+          {# th: NUEVO encabezado de la columna de la categoría #}
+          <th class="text-left px-4 py-2">Categoría</th>
           {# th: encabezado de la columna del precio #}
           <th class="text-left px-4 py-2">Precio</th>
           {# th: encabezado de la columna con los enlaces Editar / Eliminar #}
@@ -49,6 +51,8 @@
         <tr class="border-t border-slate-200">
           {# td: celda con el título del servicio #}
           <td class="px-4 py-2">{{ servicio.titulo }}</td>
+          {# td: NUEVA celda con la categoría; muestra su nombre gracias a __str__ (default si quedó vacía) #}
+          <td class="px-4 py-2">{{ servicio.categoria|default:"Sin categoría" }}</td>
           {# td: celda con el precio; el $ es texto fijo antes del número #}
           <td class="px-4 py-2">${{ servicio.precio }}</td>
           {# td: celda de las acciones; whitespace-nowrap evita que los 2 enlaces se partan en 2 renglones #}
@@ -63,10 +67,10 @@
         </tr>
         {# empty: se dibuja SOLO si no hay ningún servicio que mostrar #}
         {% empty %}
-        {# fila única con el aviso; colspan="3" la estira a lo ancho de las 3 columnas #}
+        {# fila única con el aviso; colspan="4" (antes 3) la estira a lo ancho de las 4 columnas #}
         <tr>
           {# if query: el mensaje cambia si la lista está vacía por una búsqueda o porque no hay registros #}
-          <td colspan="3" class="text-center text-slate-500 py-6">{% if query %}No hay servicios que coincidan con "{{ query }}".{% else %}Aún no tienes servicios. ¡Crea el primero!{% endif %}</td>
+          <td colspan="4" class="text-center text-slate-500 py-6">{% if query %}No hay servicios que coincidan con "{{ query }}".{% else %}Aún no tienes servicios. ¡Crea el primero!{% endif %}</td>
         {# cierra la fila del aviso #}
         </tr>
         {# endfor: fin de la repetición #}
