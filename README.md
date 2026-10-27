@@ -1,3 +1,31 @@
+# Práctica final U4P3 — Aplicaciones Web
+
+**Alumno:** Duarte Ruiz Sebastián · **Grupo:** DSM4-1  
+**Repositorio:** https://github.com/duarteruizsebastian/u4p3-duarte-ruiz-sebastian
+
+Implementa Categoria, Factura, DetalleFactura, migraciones escalonadas conservando los datos, seis reportes SQL manuales, índices y exportación CSV.
+
+## Inicio
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+Copy-Item .env.example .env
+# Configura las credenciales PRIVADAS de Aiven
+python manage.py check
+python manage.py showmigrations core
+python manage.py migrate
+python manage.py makemigrations --check --dry-run
+python manage.py cargar_demo tu_usuario
+python manage.py runserver
+```
+
+Rutas: /servicios/, /categorias/, /facturas/, /reportes/ y /admin/.
+
+**Pendiente de validar fuera de GitHub:** migraciones reales en Aiven, pruebas locales, EXPLAIN, publicación en Render, evidencias y video. Antes de migrar, realiza un respaldo. No agregues `.env` a Git.
+ 
+--- 
+
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:115e59,100:0d9488&height=200&section=header&text=U4S8%20%7C%20Servicios%20Web&fontSize=38&fontColor=ffffff&fontAlignY=35&desc=Deploy%20Final%20%E2%80%A2%20Seguridad%20%E2%80%A2%20Release%20v1.0&descAlignY=58&descSize=16" alt="Portada U4S8: proyecto final de Servicios Web" width="100%" />
