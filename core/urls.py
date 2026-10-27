@@ -1,25 +1,41 @@
-# path: función para declarar una ruta URL y a qué vista apunta
+# path: función para declarar cada ruta
 from django.urls import path
-# views: el módulo con todas las funciones-vista de esta app
+# views: el archivo core/views.py
 from . import views
 
 # urlpatterns: la lista de rutas que Django revisa, en orden, para cada URL
 urlpatterns = [
-    # '': la página de inicio de la Semana 3; no la borres
+    # página de inicio (Semana 3)
     path('', views.inicio, name='inicio'),
-    # /servicios/: listado (Semana 3), ahora filtrado por usuario
+    # listado de servicios
     path('servicios/', views.servicios, name='servicios'),
-    # /servicios/nuevo/: crear (Semana 5)
+    # crear servicio
     path('servicios/nuevo/', views.crear_servicio, name='crear_servicio'),
-    # /servicios/<id>/editar/: editar (Semana 5)
+    # editar servicio
     path('servicios/<int:pk>/editar/', views.editar_servicio, name='editar_servicio'),
-    # /servicios/<id>/eliminar/: eliminar con confirmación (Semana 5)
+    # eliminar servicio
     path('servicios/<int:pk>/eliminar/', views.eliminar_servicio, name='eliminar_servicio'),
-    # /registro/: NUEVA, pantalla de alta de cuenta
+    # NUEVA: lista y alta de categorías
+    path('categorias/', views.categorias, name='categorias'),
+    # NUEVA: editar una categoría
+    path('categorias/<int:pk>/editar/', views.editar_categoria, name='editar_categoria'),
+    # NUEVA: eliminar una categoría (solo POST)
+    path('categorias/<int:pk>/eliminar/', views.eliminar_categoria, name='eliminar_categoria'),
+    # NUEVA: lista de facturas
+    path('facturas/', views.facturas, name='facturas'),
+    # NUEVA: crear factura con sus renglones
+    path('facturas/nueva/', views.crear_factura, name='crear_factura'),
+    # NUEVA: detalle de una factura
+    path('facturas/<int:pk>/', views.detalle_factura, name='detalle_factura'),
+    # NUEVA: lista de reportes SQL
+    path('reportes/', views.reportes, name='reportes'),
+    # NUEVA: un reporte; <slug:clave> acepta letras, números y guiones (ej. ingresos-por-categoria)
+    path('reportes/<slug:clave>/', views.reporte, name='reporte'),
+    # registro (Semana 6)
     path('registro/', views.registro, name='registro'),
-    # /login/: NUEVA, pantalla de inicio de sesión propia (reemplaza al login prestado de /admin)
+    # login (Semana 6)
     path('login/', views.iniciar_sesion, name='login'),
-    # /logout/: NUEVA, cierra la sesión activa
+    # logout (Semana 6)
     path('logout/', views.cerrar_sesion, name='logout'),
 # cierra la lista urlpatterns
 ]
