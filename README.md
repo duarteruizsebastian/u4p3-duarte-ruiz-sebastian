@@ -1,8 +1,70 @@
 <div align="center">
 
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:115e59,100:0d9488&height=200&section=header&text=U4P3%20%7C%20Servicios%20Web&fontSize=38&fontColor=ffffff&fontAlignY=35&desc=Categorias%20%E2%80%A2%20Facturas%20%E2%80%A2%20Reportes%20SQL&descAlignY=58&descSize=16" alt="Portada U4P3: proyecto final de Servicios Web" width="100%" />
+
+# Unidad 4 · Práctica final U4P3
+
+### Categorías, facturas y reportes SQL sobre tu CRUD de servicios
+
+**Aplicaciones Web · Proyecto integrador Django**
+
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-Aiven-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://aiven.io/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Render](https://img.shields.io/badge/Deploy-Render-20232A?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+
+**Desarrollado por Sebastián Duarte Ruiz · DSM 4-1**
+
+[![Ver proyecto en Render](https://img.shields.io/badge/VER_DEMO_EN_RENDER-0d9488?style=for-the-badge&logo=render&logoColor=white)](https://u4p3-duarte-ruiz-sebastian.onrender.com/)
+[![Ver repositorio GitHub](https://img.shields.io/badge/VER_CODIGO_EN_GITHUB-24292f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duarteruizsebastian/u4p3-duarte-ruiz-sebastian)
+
+</div>
+
+---
+
+## 📌 Descripción del proyecto
+
+Esta práctica corresponde a la **Unidad 4, Práctica 3 (U4P3)** de Aplicaciones Web y representa la entrega final del sistema de administración de servicios.
+
+Se conserva el proyecto de la Unidad anterior (autenticación, CRUD, búsqueda, paginación) y se le agregan **tres tablas nuevas relacionadas** (`Categoria`, `Factura` y `DetalleFactura`), migración de datos sin pérdida de información, y la implementación de **6 consultas SQL a mano** (utilizando SUM, COUNT, MIN, MAX, HAVING y RANK) para un panel de reportes optimizado con índices.
+
+### 🌐 Enlaces del proyecto
+
+| Recurso               | Enlace                                                                           |
+| :-------------------- | :------------------------------------------------------------------------------- |
+| **Aplicación final**  | [Abrir en Render](https://u4p3-duarte-ruiz-sebastian.onrender.com/)              |
+| **Repositorio final** | [GitHub U4P3](https://github.com/duarteruizsebastian/u4p3-duarte-ruiz-sebastian) |
+
+---
+
+## ✨ Funcionalidades del sistema
+
+| Módulo                         | ¿Qué permite hacer?                                                                           |
+| :----------------------------- | :-------------------------------------------------------------------------------------------- |
+| 🔐 **Autenticación**           | Registrar usuarios, iniciar y cerrar sesión.                                                  |
+| 🛡️ **Aislamiento de datos**    | Consultar y modificar únicamente información del usuario autenticado.                         |
+| 📝 **CRUD de Servicios**       | Crear, listar, editar y eliminar servicios.                                                   |
+| 🗂️ **Migración de Categorías** | Modelo `Categoria` independiente con relación de llave foránea, preservando datos anteriores. |
+| 🧾 **Facturación**             | Registro de `Factura` y `DetalleFactura` para los servicios adquiridos.                       |
+| 📊 **Reportes SQL**            | Panel de reportes con 6 consultas SQL nativas mostrando métricas y agrupaciones complejas.    |
+| 📱 **Diseño responsivo**       | Adaptar la interfaz a celulares y computadoras con Tailwind CSS.                              |
+
+### 🆕 Actividades de cierre de la Práctica 3
+
+- Creación de modelos `Categoria`, `Factura` y `DetalleFactura` con sus respectivas llaves foráneas (`CASCADE`, `PROTECT`).
+- Migración de datos estructurada en pasos para pasar del texto libre a la tabla relacional sin perder registros.
+- Construcción de un archivo `reportes.py` con SQL puro optimizado mediante EXPLAIN en MySQL.
+- Creación de plantillas y vistas para visualizar métricas.
+- Registro de 13 commits detallados paso a paso documentando el proceso.
+- Despliegue en Render del Web Service actualizado.
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:115e59,100:0d9488&height=200&section=header&text=U4S8%20%7C%20Servicios%20Web&fontSize=38&fontColor=ffffff&fontAlignY=35&desc=Deploy%20Final%20%E2%80%A2%20Seguridad%20%E2%80%A2%20Release%20v1.0&descAlignY=58&descSize=16" alt="Portada U4S8: proyecto final de Servicios Web" width="100%" />
 
 # Unidad 4 · Semana 8
+
 ### Deployment final, auditoría y defensa oral
 
 **Aplicaciones Web · Proyecto integrador Django**
@@ -34,14 +96,14 @@ La aplicación permite que los usuarios registrados creen, consulten, editen y e
 
 ### 🌐 Enlaces del proyecto
 
-| Recurso | Enlace |
-|:--|:--|
-| **Aplicación final** | [Abrir listado en Render](https://u4s8-duarte-ruiz-sebastian.onrender.com/servicios/) |
-| **Repositorio final** | [GitHub U4S8](https://github.com/duarteruizsebastian/u4s8-duarte-ruiz-sebastian) |
-| **Versión publicada** | [Release v1.0](https://github.com/duarteruizsebastian/u4s8-duarte-ruiz-sebastian/releases/tag/v1.0) |
-| **Repositorio anterior** | [GitHub U4S7](https://github.com/duarteruizsebastian/u4s7-duarte-ruiz-sebastian) |
-| **Registro** | [Crear una cuenta](https://u4s8-duarte-ruiz-sebastian.onrender.com/registro/) |
-| **Inicio de sesión** | [Acceder al sistema](https://u4s8-duarte-ruiz-sebastian.onrender.com/login/) |
+| Recurso                  | Enlace                                                                                              |
+| :----------------------- | :-------------------------------------------------------------------------------------------------- |
+| **Aplicación final**     | [Abrir listado en Render](https://u4s8-duarte-ruiz-sebastian.onrender.com/servicios/)               |
+| **Repositorio final**    | [GitHub U4S8](https://github.com/duarteruizsebastian/u4s8-duarte-ruiz-sebastian)                    |
+| **Versión publicada**    | [Release v1.0](https://github.com/duarteruizsebastian/u4s8-duarte-ruiz-sebastian/releases/tag/v1.0) |
+| **Repositorio anterior** | [GitHub U4S7](https://github.com/duarteruizsebastian/u4s7-duarte-ruiz-sebastian)                    |
+| **Registro**             | [Crear una cuenta](https://u4s8-duarte-ruiz-sebastian.onrender.com/registro/)                       |
+| **Inicio de sesión**     | [Acceder al sistema](https://u4s8-duarte-ruiz-sebastian.onrender.com/login/)                        |
 
 > **Nota:** los enlaces U4S8 estarán activos después de crear el repositorio, desplegar el servicio en Render y publicar el Release v1.0. Si Render asigna un dominio diferente, actualiza las URLs de este README.
 
@@ -49,16 +111,16 @@ La aplicación permite que los usuarios registrados creen, consulten, editen y e
 
 ## ✨ Funcionalidades del sistema
 
-| Módulo | ¿Qué permite hacer? |
-|:--|:--|
-| 🔐 **Autenticación** | Registrar usuarios, iniciar y cerrar sesión. |
+| Módulo                      | ¿Qué permite hacer?                                                 |
+| :-------------------------- | :------------------------------------------------------------------ |
+| 🔐 **Autenticación**        | Registrar usuarios, iniciar y cerrar sesión.                        |
 | 🛡️ **Aislamiento de datos** | Consultar y modificar únicamente servicios del usuario autenticado. |
-| 📝 **CRUD** | Crear, listar, editar y eliminar servicios. |
-| 🔎 **Búsqueda** | Filtrar por título sin distinguir mayúsculas y minúsculas. |
-| 📄 **Paginación** | Mostrar **5 servicios por página**. |
-| 📭 **Estados vacíos** | Informar cuando no existen servicios o resultados de búsqueda. |
-| 📱 **Diseño responsivo** | Adaptar la interfaz a celulares y computadoras. |
-| ♿ **Accesibilidad básica** | Incluir etiquetas accesibles en controles relevantes. |
+| 📝 **CRUD**                 | Crear, listar, editar y eliminar servicios.                         |
+| 🔎 **Búsqueda**             | Filtrar por título sin distinguir mayúsculas y minúsculas.          |
+| 📄 **Paginación**           | Mostrar **5 servicios por página**.                                 |
+| 📭 **Estados vacíos**       | Informar cuando no existen servicios o resultados de búsqueda.      |
+| 📱 **Diseño responsivo**    | Adaptar la interfaz a celulares y computadoras.                     |
+| ♿ **Accesibilidad básica** | Incluir etiquetas accesibles en controles relevantes.               |
 
 ### 🆕 Actividades de cierre de la Semana 8
 
@@ -165,16 +227,16 @@ u4s8-duarte-ruiz-sebastian/
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Función |
-|:--|:--|
-| **Python** | Lenguaje del servidor. |
-| **Django** | Framework de aplicación web, modelos y autenticación. |
-| **MySQL en Aiven** | Almacenamiento persistente de datos. |
-| **Tailwind CSS** | Estilos y diseño adaptable. |
-| **Gunicorn** | Servidor de aplicación para producción. |
-| **WhiteNoise** | Distribución de archivos estáticos. |
-| **Render** | Alojamiento y despliegue del sitio. |
-| **Git/GitHub** | Control de versiones y publicación del Release. |
+| Tecnología         | Función                                               |
+| :----------------- | :---------------------------------------------------- |
+| **Python**         | Lenguaje del servidor.                                |
+| **Django**         | Framework de aplicación web, modelos y autenticación. |
+| **MySQL en Aiven** | Almacenamiento persistente de datos.                  |
+| **Tailwind CSS**   | Estilos y diseño adaptable.                           |
+| **Gunicorn**       | Servidor de aplicación para producción.               |
+| **WhiteNoise**     | Distribución de archivos estáticos.                   |
+| **Render**         | Alojamiento y despliegue del sitio.                   |
+| **Git/GitHub**     | Control de versiones y publicación del Release.       |
 
 ---
 
@@ -253,13 +315,13 @@ El respaldo se almacena **en la carpeta superior**, fuera del repositorio Git. E
 
 Crear un **Web Service nuevo** conectado al repositorio de U4S8.
 
-| Configuración | Valor |
-|:--|:--|
-| **Servicio** | `u4s8-duarte-ruiz-sebastian` |
-| **Rama** | `main` |
-| **Tipo de instancia** | `Free` |
-| **Build Command** | `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate` |
-| **Start Command** | `gunicorn miproyecto_drs.wsgi` |
+| Configuración         | Valor                                                                                                     |
+| :-------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **Servicio**          | `u4s8-duarte-ruiz-sebastian`                                                                              |
+| **Rama**              | `main`                                                                                                    |
+| **Tipo de instancia** | `Free`                                                                                                    |
+| **Build Command**     | `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate` |
+| **Start Command**     | `gunicorn miproyecto_drs.wsgi`                                                                            |
 
 ### Variables de entorno necesarias
 
@@ -323,11 +385,11 @@ Esto identifica el estado oficial del proyecto entregado.
 
 ## 📖 Historial de unidades
 
-| Unidad | Avance principal |
-|:--|:--|
-| **Unidad 1** | Portafolio estático con HTML5 y Tailwind CSS. |
-| **Unidad 2** | Django, modelo Servicio, conexión MySQL en Aiven y primer despliegue. |
-| **Unidad 3** | CRUD con ModelForms, autenticación y sesiones. |
+| Unidad       | Avance principal                                                       |
+| :----------- | :--------------------------------------------------------------------- |
+| **Unidad 1** | Portafolio estático con HTML5 y Tailwind CSS.                          |
+| **Unidad 2** | Django, modelo Servicio, conexión MySQL en Aiven y primer despliegue.  |
+| **Unidad 3** | CRUD con ModelForms, autenticación y sesiones.                         |
 | **Unidad 4** | Búsqueda, paginación, revisión de interfaz, auditoría y entrega final. |
 
 ---
@@ -365,7 +427,7 @@ El docente puede plantear preguntas conceptuales o solicitar pequeños cambios d
 **Unidad 4 · Semana 8 — Aplicaciones Web**  
 **Sebastián Duarte Ruiz · DSM 4-1**
 
-*Proyecto final desarrollado con Django, MySQL (Aiven), Tailwind CSS y Render.*
+_Proyecto final desarrollado con Django, MySQL (Aiven), Tailwind CSS y Render._
 
 [⬆️ Volver al inicio](#unidad-4--semana-8)
 
